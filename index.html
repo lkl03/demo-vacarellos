@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Vacarellos — Sabor auténtico argentino</title>
+<meta name="description" content="Vacarellos — Sabor auténtico argentino"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;border:none;cursor:pointer;background:transparent;color:inherit}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes widen{from{width:0}to{width:100%}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+.reveal{opacity:0;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.reveal.d1{animation-delay:.1s}
+.reveal.d2{animation-delay:.25s}
+.reveal.d3{animation-delay:.4s}
+.reveal.d4{animation-delay:.55s}
+.reveal.d5{animation-delay:.7s}
+.scroll-reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.scroll-reveal.visible{opacity:1;transform:translateY(0)}
+
+:root{--bg:#0f0a08;--surface:#1a1412;--text:#e8ddd0;--muted:#a8988a;--accent:#c4442a;--accent-soft:rgba(196,68,42,0.12);--border:rgba(232,221,208,0.08);--font-d:'Archivo Black',sans-serif;--font-b:'Archivo',sans-serif}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);font-size:16px;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--font-d);line-height:0.95;letter-spacing:-0.03em;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:50;background:var(--text);color:var(--bg);border-bottom:3px solid var(--accent)}
+nav .in{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1400px;margin:0 auto}
+.logo{font-family:var(--font-d);font-size:22px;font-weight:700;text-transform:uppercase}
+nav .cta{font-family:var(--font-d);text-transform:uppercase;font-size:14px;font-weight:700;padding:12px 24px;background:var(--accent);color:var(--text);border:2px solid var(--accent);transition:all .2s;letter-spacing:0.03em}
+nav .cta:hover{background:transparent;color:var(--accent)}
+@media(max-width:768px){nav .in{padding:14px 20px}.logo{font-size:18px}nav .cta{padding:8px 16px;font-size:12px}}
+.hero{padding:80px 32px 120px;border-bottom:3px solid var(--text);overflow:hidden}
+.hero-g{display:grid;grid-template-columns:3fr 2fr;max-width:1400px;margin:0 auto;align-items:stretch}
+.hero-l{padding:40px 40px 40px 0;border-right:3px solid var(--text)}
+.hero-m{font-family:var(--font-b);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent);margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.hero-m::before{content:'●';color:var(--accent);font-size:10px}
+.hero-t{font-size:clamp(56px,10vw,160px);font-weight:400;line-height:0.85;margin-bottom:40px}
+.hero-a{font-family:var(--font-b);font-size:19px;line-height:1.5;color:var(--muted);max-width:560px;margin-bottom:48px}
+.hero-r{display:flex;flex-wrap:wrap}
+.hero-rt{padding-left:40px;display:flex;align-items:flex-end}
+.hero-rt img{width:100%;height:100%;min-height:500px;object-fit:cover;border:3px solid var(--text)}
+@media(max-width:968px){.hero-g{grid-template-columns:1fr}.hero-l{border-right:0;border-bottom:3px solid var(--text);padding:0 0 40px 0}.hero-rt{padding:40px 0 0 0}.hero-rt img{min-height:320px}.hero{padding:40px 20px 60px}}
+.btn-b{display:inline-flex;align-items:center;gap:12px;padding:20px 32px;background:var(--accent);color:var(--text);font-family:var(--font-d);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:0.05em;border:3px solid var(--text);transition:all .2s;box-shadow:6px 6px 0 var(--text)}
+.btn-b:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--text)}
+.btn-l{display:inline-flex;align-items:center;gap:12px;padding:20px 32px;background:transparent;color:var(--text);font-family:var(--font-d);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:0.05em;border:3px solid var(--text);transition:all .2s;margin-left:-3px}
+.btn-l:hover{background:var(--text);color:var(--bg)}
+.proof{padding:32px 0;background:var(--text);color:var(--bg);border-bottom:3px solid var(--text)}
+.proof-i{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;font-family:var(--font-b);font-size:14px;max-width:1400px;margin:0 auto;padding:0 20px}
+.proof-b{font-family:var(--font-d);font-size:48px;font-weight:700;line-height:1}
+.proof-st{font-size:18px;letter-spacing:4px;color:var(--accent)}
+section.bl{padding:120px 32px;border-bottom:3px solid var(--text)}
+.bl-in{max-width:1400px;margin:0 auto}
+.bl-l{display:inline-block;font-family:var(--font-b);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--bg);background:var(--accent);padding:6px 12px;margin-bottom:40px}
+.bl-t{font-size:clamp(48px,7vw,96px);font-weight:400;margin-bottom:40px;line-height:0.9}
+.bl-le{font-family:var(--font-b);font-size:20px;color:var(--muted);max-width:700px;line-height:1.5;margin-bottom:80px;text-transform:none}
+@media(max-width:768px){section.bl{padding:60px 20px}.bl-le{margin-bottom:48px}}
+.svc-g{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--text);border-left:3px solid var(--text)}
+.svc-x{padding:48px 36px;border-right:3px solid var(--text);border-bottom:3px solid var(--text);background:var(--surface);transition:all .2s}
+.svc-x:hover{background:var(--accent);color:var(--text)}
+.svc-x .n{font-family:var(--font-d);font-size:80px;font-weight:700;line-height:1;margin-bottom:24px;color:var(--accent)}
+.svc-x:hover .n{color:var(--text)}
+.svc-x h3{font-size:22px;margin-bottom:12px;font-weight:700;letter-spacing:-0.02em}
+.svc-x p{font-family:var(--font-b);font-size:15px;line-height:1.55;color:var(--muted);text-transform:none}
+.svc-x:hover p{color:var(--text)}
+@media(max-width:968px){.svc-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.svc-g{grid-template-columns:1fr}}
+.diff-bl{background:var(--text);color:var(--bg);border-color:var(--text)}
+.diff-bl .bl-l{background:var(--bg);color:var(--text)}
+.diff-bl .bl-t{color:var(--bg)}
+.diff-bl .bl-le{color:var(--muted)}
+.diff-g{display:grid;grid-template-columns:repeat(3,1fr);border-top:3px solid var(--bg);border-left:3px solid var(--bg)}
+.diff-t{padding:56px 36px;border-right:3px solid var(--bg);border-bottom:3px solid var(--bg)}
+.diff-t .n{font-family:var(--font-d);font-size:96px;font-weight:700;line-height:0.9;color:var(--accent);margin-bottom:32px}
+.diff-t h3{font-size:24px;color:var(--bg);margin-bottom:16px;font-weight:700}
+.diff-t p{font-family:var(--font-b);font-size:15px;color:var(--muted);line-height:1.6;text-transform:none}
+@media(max-width:968px){.diff-g{grid-template-columns:1fr}}
+.contact-bl{text-align:center}
+.ct-g{display:grid;grid-template-columns:repeat(2,1fr);max-width:800px;margin:48px auto 56px;border-top:3px solid var(--text);border-left:3px solid var(--text)}
+.ct-i{padding:40px 32px;border-right:3px solid var(--text);border-bottom:3px solid var(--text);background:var(--surface);text-align:left;transition:all .2s}
+.ct-i:hover{background:var(--accent)}
+.ct-l{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ct-i:hover .ct-l{color:var(--text)}
+.ct-v{font-family:var(--font-d);font-size:22px;color:var(--text);font-weight:700}
+@media(max-width:640px){.ct-g{grid-template-columns:1fr}}
+footer.m{padding:60px 32px;border-top:3px solid var(--text);background:var(--text);color:var(--bg)}
+footer.m .in{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;max-width:1400px;margin:0 auto}
+footer.m .br{font-family:var(--font-d);font-size:36px;margin-bottom:12px;font-weight:700;color:var(--bg)}
+footer.m .tag{font-family:var(--font-b);color:var(--muted);font-size:14px;max-width:320px;text-transform:none}
+footer.m .col h4{font-family:var(--font-b);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-weight:700}
+footer.m .col p{font-family:var(--font-b);font-size:14px;color:var(--bg);line-height:1.7;text-transform:none}
+@media(max-width:768px){footer.m .in{grid-template-columns:1fr;gap:32px}footer.m{padding:40px 20px}}
+</style></head><body>
+<nav><div class="in"><span class="logo">Vacarellos</span><a href="https://wa.me/5491145712287" target="_blank" rel="noopener" class="cta">Reservar</a></div></nav>
+<section class="hero"><div class="hero-g">
+<div class="hero-l"><div class="hero-m reveal">Bar &amp; Cocina</div>
+<h1 class="hero-t reveal d1">Sabor auténtico argentino</h1>
+<p class="hero-a reveal d2">En Vacarellos, nos esforzamos por ofrecer una experiencia gastronómica auténtica y acogedora, con platos que reflejan la esencia de la cocina argentina. Nuestro restaurante, ubicado en el corazón de la Ciudad Autónoma de Buenos Aires, busca ser un espacio donde la tradición y la creatividad se unen para deleitar a nuestros comensales.</p>
+<div class="hero-r reveal d3">
+  <a href="https://wa.me/5491145712287" target="_blank" rel="noopener" class="btn-b">Reservar</a>
+  <a href="tel:01145712287" class="btn-l">Llamar</a>
+</div></div>
+<div class="hero-rt reveal d4"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80&auto=format&fit=crop" alt="Vacarellos"/></div>
+</div></section>
+<div class="proof"><div class="proof-i">
+<span class="proof-b">4.2</span><span class="proof-st">★★★★★</span>
+
+<span>Av. Albarellos 2602, C1419FSQ Cdad. Autónoma de Buenos Aires, Argentina</span>
+</div></div>
+<section class="bl scroll-reveal"><div class="bl-in">
+<span class="bl-l">Servicios</span>
+<h2 class="bl-t">Lo que<br/>ofrecemos</h2>
+<p class="bl-le">En Vacarellos, nos esforzamos por ofrecer una experiencia gastronómica auténtica y acogedora, con platos que reflejan la esencia de la cocina argentina. Nuestro restaurante, ubicado en el corazón de la Ciudad Autónoma de Buenos Aires, busca ser un espacio donde la tradición y la creatividad se unen para deleitar a nuestros comensales.</p>
+<div class="svc-g">
+<div class="svc-x scroll-reveal" style="transition-delay:0ms">
+<div class="n">01</div>
+<h3>Cena de autor</h3>
+<p>Disfrutá de una cena cuidadosamente diseñada por nuestros chefs, con platos que destacan la frescura y calidad de los ingredientes locales.</p></div><div class="svc-x scroll-reveal" style="transition-delay:60ms">
+<div class="n">02</div>
+<h3>Almuerzo ejecutivo</h3>
+<p>Ofrecemos un menú especial para ejecutivos, con opciones rápidas y nutritivas que se adaptan a tus necesidades laborales.</p></div><div class="svc-x scroll-reveal" style="transition-delay:120ms">
+<div class="n">03</div>
+<h3>Eventos y celebraciones</h3>
+<p>Nuestro restaurante es el lugar ideal para celebrar cumpleaños, bodas y otros eventos especiales, con capacidad para grupos de hasta 50 personas.</p></div><div class="svc-x scroll-reveal" style="transition-delay:180ms">
+<div class="n">04</div>
+<h3>Servicio de catering</h3>
+<p>Llevá el sabor de Vacarellos a tu evento, con nuestros servicios de catering personalizados y atención al detalle.</p></div><div class="svc-x scroll-reveal" style="transition-delay:240ms">
+<div class="n">05</div>
+<h3>Menú para celiacos</h3>
+<p>Contamos con opciones sin gluten para que todos puedan disfrutar de nuestra cocina, sin comprometer la calidad y el sabor.</p></div><div class="svc-x scroll-reveal" style="transition-delay:300ms">
+<div class="n">06</div>
+<h3>Reservas y delivery</h3>
+<p>Realizá tus reservas con anticipación o pedí tu comida para llevar, para garantizar una experiencia sin estrés y deliciosa en Vacarellos.</p></div>
+</div></div></section>
+<section class="bl diff-bl scroll-reveal"><div class="bl-in">
+<span class="bl-l">Enfoque</span>
+<h2 class="bl-t">Por qué<br/>elegirnos</h2>
+<p class="bl-le">Tres principios que definen nuestro trabajo.</p>
+<div class="diff-g">
+<div class="diff-t scroll-reveal" style="transition-delay:0ms">
+<div class="n">01</div>
+<h3>Ingredientes frescos</h3>
+<p>En Vacarellos, nos aseguramos de utilizar solo los mejores ingredientes frescos y locales, para garantizar la calidad y el sabor de nuestros platos.</p></div><div class="diff-t scroll-reveal" style="transition-delay:100ms">
+<div class="n">02</div>
+<h3>Atención personalizada</h3>
+<p>Nuestro equipo de profesionales se encarga de brindar una atención cálida y personalizada a cada comensal, para hacer que su experiencia en Vacarellos sea inolvidable.</p></div><div class="diff-t scroll-reveal" style="transition-delay:200ms">
+<div class="n">03</div>
+<h3>Ambiente acogedor</h3>
+<p>Nuestro restaurante cuenta con un ambiente cálido y acogedor, diseñado para que te sientas como en casa, con detalles que reflejan la esencia de la cultura argentina.</p></div>
+</div></div></section>
+<section class="bl contact-bl scroll-reveal"><div class="bl-in">
+<span class="bl-l">Contacto</span>
+<h2 class="bl-t">Conversemos</h2>
+<div class="ct-g">
+<a href="tel:01145712287" class="ct-i"><div class="ct-l">Teléfono</div><div class="ct-v">01145712287</div></a>
+<a href="https://maps.google.com/?q=Vacarellos%20Av.%20Albarellos%202602%2C%20C1419FSQ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina" target="_blank" rel="noopener" class="ct-i"><div class="ct-l">Dirección</div><div class="ct-v">Av. Albarellos 2602, C1419FSQ Cdad. Autónoma de Buenos Aires, Argentina</div></a>
+</div>
+<a href="https://wa.me/5491145712287" target="_blank" rel="noopener" class="btn-b">Escribinos por WhatsApp</a>
+</div></section>
+<footer class="m"><div class="in">
+<div><div class="br">Vacarellos</div><p class="tag">En Vacarellos, nos esforzamos por ofrecer una experiencia gastronómica auténtica y acogedora, con platos que reflejan la esencia de la cocina argentina. Nuestro restaurante, ubicado en el corazón de la Ciudad Autónoma de Buenos Aires, busca ser un espacio donde la tradición y la creatividad se unen para deleitar a nuestros comensales.</p></div>
+<div class="col"><h4>Contacto</h4><p>01145712287</p><p>Av. Albarellos 2602, C1419FSQ Cdad. Autónoma de Buenos Aires, Argentina</p></div>
+<div class="col"><h4>Rubro</h4><p>Restaurante</p></div>
+</div></footer>
+<div class="eterlab-credit">
+  <div class="eterlab-credit-inner">
+    <p>©2026 | diseñado y desarrollado por <a href="https://eterlab.co/" target="_blank" rel="noreferrer">eterlab.</a></p>
+  </div>
+</div>
+<style>
+.eterlab-credit{background:#212121}
+.eterlab-credit-inner{max-width:1536px;margin:0 auto;padding:8px 16px}
+.eterlab-credit p{text-align:center;font-size:12px;color:rgba(255,255,255,0.8);font-family:'Montserrat',sans-serif;font-weight:400;margin:0;letter-spacing:0.01em}
+.eterlab-credit a{font-style:italic;color:rgba(255,255,255,0.9);transition:color .2s;text-decoration:none;font-weight:500}
+.eterlab-credit a:hover{color:#fff}
+</style><a href="https://wa.me/5491145712287" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<style>
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:99;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(37,211,102,0.35);transition:all .3s cubic-bezier(.2,.8,.2,1)}
+.wa-float:hover{transform:scale(1.08) rotate(-5deg);box-shadow:0 20px 40px rgba(37,211,102,0.45)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+</style><script>
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.scroll-reveal').forEach(el => io.observe(el));
+})();
+</script>
+</body></html>
